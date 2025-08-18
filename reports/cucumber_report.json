@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 287420165
+              "duration": 262348813
             }
           },
           {
@@ -32,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1179282
+              "duration": 1161547
             }
           }
         ],
@@ -56,7 +56,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 110984286
+              "duration": 351797978
             }
           },
           {
@@ -69,7 +69,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 245444
+              "duration": 265849
             }
           },
           {
@@ -82,7 +82,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 309280
+              "duration": 320865
             }
           }
         ],
@@ -106,7 +106,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 134256348
+              "duration": 137048308
             }
           },
           {
@@ -119,7 +119,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 195359
+              "duration": 151653
             }
           }
         ],
@@ -143,7 +143,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 111894769
+              "duration": 99021197
             }
           },
           {
@@ -156,7 +156,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 373994
+              "duration": 387136
             }
           },
           {
@@ -169,7 +169,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 288305
+              "duration": 294867
             }
           }
         ],

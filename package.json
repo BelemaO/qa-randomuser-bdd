@@ -5,8 +5,7 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "test": "cucumber-js --require-module ts-node/register --require features/**/*.ts --format json:reports/cucumber_report.json",
-    "report": "node generate-report.js"
+    "test": "cucumber-js --require-module ts-node/register --require features/**/*.ts ----publish-quiet"
   },
   "keywords": [],
   "author": "",
