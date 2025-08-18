@@ -1,0 +1,187 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "random-user-api;get-a-random-user-successfully",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Get a random user successfully",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "I send a request to get a random user",
+            "match": {
+              "location": "features/step_definitions/randomUser.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 303367987
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "the response status should be 200",
+            "match": {
+              "location": "features/step_definitions/randomUser.steps.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1158719
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "random-user-api;get-multiple-users",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Get multiple users",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I send a request to get 5 users",
+            "match": {
+              "location": "features/step_definitions/randomUser.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104753797
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "the response status should be 200",
+            "match": {
+              "location": "features/step_definitions/randomUser.steps.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 362694
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the response should return 5 users",
+            "match": {
+              "location": "features/step_definitions/randomUser.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 431797
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "random-user-api;invalid-endpoint-returns-404",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Invalid endpoint returns 404",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I send a request to an invalid endpoint",
+            "match": {
+              "location": "features/step_definitions/randomUser.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 127897792
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "the response status should be 404",
+            "match": {
+              "location": "features/step_definitions/randomUser.steps.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 152091
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "random-user-api;invalid-results-parameter-defaults-to-1",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Invalid results parameter defaults to 1",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I send a request with results parameter \"abc\"",
+            "match": {
+              "location": "features/step_definitions/randomUser.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 98760430
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "the response status should be 200",
+            "match": {
+              "location": "features/step_definitions/randomUser.steps.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 384332
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "the response should return 1 user",
+            "match": {
+              "location": "features/step_definitions/randomUser.steps.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 283385
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "random-user-api",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Random User API",
+    "tags": [],
+    "uri": "features/randomUser.feature"
+  }
+]
