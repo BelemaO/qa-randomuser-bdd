@@ -22,11 +22,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run Cucumber tests
+      - name: Run Cucumber tests (JSON output)
         run: npm test
 
-      - name: Upload JSON report
-        uses: actions/upload-artifact@v3
+      - name: Upload JSON report artifact
+        uses: actions/upload-artifact@v4
         with:
           name: cucumber-json-report
           path: reports/cucumber_report.json
+          retention-days: 7
