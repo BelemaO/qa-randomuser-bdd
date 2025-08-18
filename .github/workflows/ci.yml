@@ -10,24 +10,29 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+       steps:
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: 22
 
       - name: Install dependencies
         run: npm install
 
-      - name: Run Cucumber tests (JSON output)
-        run: npm test
+      - name: Run BDD tests
+        run: |
+          npx cucumber-js --format json:cucumber-report.json
+          echo "✅ BDD Tests Finished"
 
-      - name: Upload JSON report artifact
+      - name: Upload JSON report
         uses: actions/upload-artifact@v4
         with:
-          name: cucumber-json-report
-          path: reports/cucumber_report.json
-          retention-days: 7
+          name: cucumber-report-json
+          path: cucumber-report.json
+
+      - name: Show Cucumber Summary
+        run: |
+          echo "📊 Test Summary:"
+          cat cucumber-report.json | jq '.[] | {feature: .name, elements: [.elements[] | {scenario: .name, steps: [.steps[] | {step: .name, result: .result.status}] }] }'
