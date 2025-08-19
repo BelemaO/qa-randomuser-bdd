@@ -6,7 +6,6 @@ module.exports = {
       "progress",
       "json:report/cucumber_report.json"
     ],
-    publishQuiet: true
   }
 };
 //
