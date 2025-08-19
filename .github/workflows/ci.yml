@@ -1,38 +1,36 @@
-name: Run QA BDD Tests
+name: Run BDD Tests
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
-  test:
+  bdd-tests:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-          node-version: 22
+          node-version: '22'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Run BDD tests
+      - name: Run Cucumber BDD tests and generate JSON report
         run: |
           npx cucumber-js --format json:cucumber-report.json
           echo "✅ BDD Tests Finished"
 
-      - name: Upload JSON report
+      - name: Upload JSON report artifact
         uses: actions/upload-artifact@v4
         with:
-          name: cucumber-report-json
+          name: cucumber-json-report
           path: cucumber-report.json
-
-      - name: Show Cucumber Summary
-        run: |
-          echo "📊 Test Summary:"
-          cat cucumber-report.json | jq '.[] | {feature: .name, elements: [.elements[] | {scenario: .name, steps: [.steps[] | {step: .name, result: .result.status}] }] }'
